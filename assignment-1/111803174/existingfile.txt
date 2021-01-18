@@ -1,0 +1,16 @@
+LAB-2 : Conformance test
+
+Done to check whether a software conforms to expected behaviour.
+
+conformance testing of the system calls that is done by calling the different system call functions (e.g. write(), read(), open(), etc.) and checking if they do the desired job.
+Conformance testing of an OS:
+
+OS provides "system calls" to an applications. E.g. printf(), scanf(), etc. results in an System call.
+For example:
+
+1. By executing "int 0x80" instructions, 2. By specifying different arguments in register(e.g. EAX) the "int 0x80" may jump to different locations. Each of these then acts as a different System call.
+OS system calls are normally made available to programmers using c-library.
+
+programmers normally don't write "int 0x80" like instructions. programmers normally call functions like printf(), scanf().
+
+The printf() is actually a wrapper function on top of the write() funtion call, write() function call is actually the synonym in C of operating system's "write" system call. 	
